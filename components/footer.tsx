@@ -72,7 +72,7 @@ export default function Footer() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white/5 hover:bg-purple-500/20 text-white hover:text-purple-400 p-2 rounded-full transition-colors"
+                  className="bg-white/5 hover:bg-orange-500/20 text-white hover:text-orange-400 p-2 rounded-full transition-colors"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -88,7 +88,7 @@ export default function Footer() {
               <ul className="space-y-4">
                 {column.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
-                    <Link href={link.href} className="text-gray-400 hover:text-purple-400 transition-colors">
+                    <Link href={link.href} className="text-gray-400 hover:text-orange-400 transition-colors">
                       {link.name}
                     </Link>
                   </li>
@@ -102,13 +102,13 @@ export default function Footer() {
           <p className="text-gray-500 text-sm mb-4 md:mb-0">© {currentYear} Digital Penguin. All rights reserved.</p>
 
           <div className="flex space-x-6">
-            <Link href="/terms" className="text-gray-500 hover:text-purple-400 text-sm">
+            <Link href="/terms" className="text-gray-500 hover:text-orange-400 text-sm">
               Terms of Service
             </Link>
-            <Link href="/privacy" className="text-gray-500 hover:text-purple-400 text-sm">
+            <Link href="/privacy" className="text-gray-500 hover:text-orange-400 text-sm">
               Privacy Policy
             </Link>
-            <Link href="/cookies" className="text-gray-500 hover:text-purple-400 text-sm">
+            <Link href="/cookies" className="text-gray-500 hover:text-orange-400 text-sm">
               Cookie Policy
             </Link>
           </div>

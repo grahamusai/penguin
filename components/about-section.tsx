@@ -33,12 +33,12 @@ export default function AboutSection() {
           className="text-center mb-16"
         >
           <motion.h2 variants={fadeIn} custom={0} className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            About <span className="text-purple-500">Digital Penguin</span>
+            About <span className="text-[#ff0000]">Digital Penguin</span>
           </motion.h2>
           <motion.div
             variants={fadeIn}
             custom={1}
-            className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-6"
+            className="w-20 h-1 bg-gradient-to-r from-[#ff0000] to-orange-600 mx-auto mb-6"
           />
           <motion.p variants={fadeIn} custom={2} className="text-gray-400 max-w-2xl mx-auto text-lg">
             We're a team of passionate developers, designers, and digital strategists dedicated to crafting exceptional
@@ -54,7 +54,7 @@ export default function AboutSection() {
             viewport={{ once: true, margin: "-100px" }}
           >
             <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg blur-lg opacity-30" />
+              <div className="absolute -inset-4 bg-gradient-to-r from-[#ff0000] to-orange-600 rounded-lg blur-lg opacity-30" />
               <div className="relative bg-black/80 backdrop-blur-sm p-8 rounded-lg border border-white/10">
                 <h3 className="text-2xl font-bold text-white mb-4">Our Mission</h3>
                 <p className="text-gray-400 mb-6">
@@ -70,7 +70,7 @@ export default function AboutSection() {
                     "Continuous improvement",
                   ].map((item, index) => (
                     <li key={index} className="flex items-start">
-                      <CheckCircle className="text-purple-500 mr-2 h-5 w-5 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="text-[#ff0000] mr-2 h-5 w-5 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-300">{item}</span>
                     </li>
                   ))}
@@ -92,7 +92,7 @@ export default function AboutSection() {
                 whileHover={{ scale: 1.05 }}
                 className="bg-black/50 backdrop-blur-sm p-6 rounded-lg border border-white/10 text-center"
               >
-                <h3 className="text-3xl md:text-4xl font-bold text-purple-500 mb-2">{stat.value}</h3>
+                <h3 className="text-3xl md:text-4xl font-bold text-[#ff5e00] mb-2">{stat.value}</h3>
                 <p className="text-gray-400">{stat.label}</p>
               </motion.div>
             ))}

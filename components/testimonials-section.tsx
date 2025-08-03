@@ -9,26 +9,26 @@ export default function TestimonialsSection() {
   const testimonials = [
     {
       id: 1,
-      name: "Sarah Johnson",
-      position: "CEO, TechStart",
+      name: "Thabo Mokoena",
+      position: "Managing Director, CapeTech Solutions",
       content:
-        "Digital Penguin transformed our business with their exceptional web application. Their team's technical expertise and attention to detail exceeded our expectations.",
+        "Digital Penguin brought our vision to life with a stunning website that truly represents our South African brand. Their professionalism and creativity made the whole process seamless.",
       image: "/placeholder.svg?height=100&width=100",
     },
     {
       id: 2,
-      name: "Michael Chen",
-      position: "Founder, EcoShop",
+      name: "Naledi Jacobs",
+      position: "Founder, Jozi Market",
       content:
-        "Working with Digital Penguin on our e-commerce platform was a game-changer. They delivered a solution that not only looks great but has significantly increased our conversion rates.",
+        "Working with Digital Penguin was a breath of fresh air. They understood the local market and delivered an e-commerce platform that our Johannesburg customers love.",
       image: "/placeholder.svg?height=100&width=100",
     },
     {
       id: 3,
-      name: "Emma Rodriguez",
-      position: "CTO, FinanceFlow",
+      name: "Sipho Dlamini",
+      position: "CTO, Durban Fintech",
       content:
-        "The team at Digital Penguin helped us migrate our legacy systems to the cloud seamlessly. Their technical knowledge and project management skills are top-notch.",
+        "The Digital Penguin team helped us migrate our systems with zero downtime. Their expertise and commitment to South African businesses are unmatched.",
       image: "/placeholder.svg?height=100&width=100",
     },
   ]
@@ -67,16 +67,16 @@ export default function TestimonialsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            Client <span className="text-purple-500">Testimonials</span>
+            Client <span className="text-orange-500">Testimonials</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-6" />
+          <div className="w-20 h-1 bg-gradient-to-r from-[#ff0000] to-orange-600 mx-auto mb-6" />
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             Don't just take our word for it. Here's what our clients have to say about working with us.
           </p>
         </motion.div>
 
         <div className="relative max-w-4xl mx-auto">
-          <div className="absolute -left-8 -top-8 text-purple-500 opacity-30">
+          <div className="absolute -left-8 -top-8 text-orange-500 opacity-30">
             <Quote size={64} />
           </div>
 
@@ -102,7 +102,7 @@ export default function TestimonialsSection() {
                   </div>
                   <div>
                     <h4 className="text-white font-medium">{testimonials[current].name}</h4>
-                    <p className="text-purple-400 text-sm">{testimonials[current].position}</p>
+                    <p className="text-orange-400 text-sm">{testimonials[current].position}</p>
                   </div>
                 </div>
               </motion.div>
@@ -114,7 +114,7 @@ export default function TestimonialsSection() {
               variant="outline"
               size="icon"
               onClick={prev}
-              className="rounded-full border-white/10 text-white hover:bg-purple-500/20 hover:text-purple-300"
+              className="rounded-full border-white/10 text-white hover:bg-orange-500/20 hover:text-orange-300"
             >
               <ChevronLeft className="h-5 w-5" />
             </Button>
@@ -128,7 +128,7 @@ export default function TestimonialsSection() {
                     setCurrent(index)
                   }}
                   className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                    index === current ? "bg-purple-500" : "bg-white/20 hover:bg-white/40"
+                    index === current ? "bg-orange-500" : "bg-white/20 hover:bg-white/40"
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />
@@ -139,7 +139,7 @@ export default function TestimonialsSection() {
               variant="outline"
               size="icon"
               onClick={next}
-              className="rounded-full border-white/10 text-white hover:bg-purple-500/20 hover:text-purple-300"
+              className="rounded-full border-white/10 text-white hover:bg-orange-500/20 hover:text-orange-300"
             >
               <ChevronRight className="h-5 w-5" />
             </Button>

@@ -89,9 +89,9 @@ export default function WorkSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            Our <span className="text-purple-500">Work</span>
+            Our <span className="text-orange-500">Work</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-6" />
+          <div className="w-20 h-1 bg-gradient-to-r from-[#ff0000] to-orange-600 mx-auto mb-6" />
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             Explore our portfolio of successful projects and digital solutions we've delivered for our clients.
           </p>
@@ -104,7 +104,7 @@ export default function WorkSection() {
               variant={activeCategory === category.id ? "default" : "outline"}
               className={
                 activeCategory === category.id
-                  ? "bg-purple-600 hover:bg-purple-700"
+                  ? "bg-orange-600 hover:bg-orange-700"
                   : "text-white border-white/20 hover:bg-white/10"
               }
               onClick={() => setActiveCategory(category.id)}
@@ -145,7 +145,7 @@ export default function WorkSection() {
 
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag, index) => (
-                      <Badge key={index} className="bg-purple-500/30 text-purple-200 hover:bg-purple-500/50">
+                      <Badge key={index} className="bg-orange-500/30 text-orange-200 hover:bg-orange-500/50">
                         {tag}
                       </Badge>
                     ))}
@@ -157,7 +157,7 @@ export default function WorkSection() {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="flex items-center text-sm font-medium text-purple-400 hover:text-purple-300"
+                    className="flex items-center text-sm font-medium text-orange-400 hover:text-orange-300"
                   >
                     View Project <ArrowUpRight className="ml-1 h-4 w-4" />
                   </motion.a>

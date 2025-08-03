@@ -27,9 +27,9 @@ export function FloatingPaper({ count = 5 }) {
 
   // Different icons for variety
   const icons = [
-    <Code key="code" className="w-8 h-8 text-purple-400/50" />,
-    <FileText key="file" className="w-8 h-8 text-purple-400/50" />,
-    <BarChart key="chart" className="w-8 h-8 text-purple-400/50" />,
+    <Code key="code" className="w-8 h-8 text-orange-400/50" />,
+    <FileText key="file" className="w-8 h-8 text-orange-400/50" />,
+    <BarChart key="chart" className="w-8 h-8 text-orange-400/50" />,
   ]
 
   return (

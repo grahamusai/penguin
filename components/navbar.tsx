@@ -33,7 +33,7 @@ export default function Navbar() {
       </div>
 
       <div className="hidden md:flex items-center space-x-4">
-        <Button className="bg-purple-600 hover:bg-purple-700 text-white">Get a Quote</Button>
+        <Button className="bg-orange-600 hover:bg-orange-700 text-white">Get a Quote</Button>
       </div>
 
       <Button variant="ghost" size="icon" className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
@@ -64,7 +64,7 @@ export default function Navbar() {
             <MobileNavLink href="#contact" onClick={() => setIsOpen(false)}>
               Contact
             </MobileNavLink>
-            <Button className="bg-purple-600 hover:bg-purple-700 text-white w-full">Get a Quote</Button>
+            <Button className="bg-orange-600 hover:bg-orange-700 text-white w-full">Get a Quote</Button>
           </div>
         </motion.div>
       )}
@@ -76,7 +76,7 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
   return (
     <Link href={href} className="text-gray-300 hover:text-white transition-colors relative group">
       {children}
-      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-500 transition-all group-hover:w-full" />
+      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all group-hover:w-full" />
     </Link>
   )
 }

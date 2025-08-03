@@ -7,37 +7,37 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 export default function ServicesSection() {
   const services = [
     {
-      icon: <Code className="h-10 w-10 text-purple-500" />,
+      icon: <Code className="h-10 w-10 text-orange-500" />,
       title: "Software Development",
       description: "Custom software solutions tailored to your specific business needs and challenges.",
     },
     {
-      icon: <Layers className="h-10 w-10 text-purple-500" />,
+      icon: <Layers className="h-10 w-10 text-orange-500" />,
       title: "Web App Development",
       description: "Responsive, scalable web applications with modern frameworks and cutting-edge technologies.",
     },
     {
-      icon: <ShoppingCart className="h-10 w-10 text-purple-500" />,
+      icon: <ShoppingCart className="h-10 w-10 text-orange-500" />,
       title: "Ecommerce Development",
       description: "Custom online stores with seamless checkout experiences and automation capabilities.",
     },
     {
-      icon: <Database className="h-10 w-10 text-purple-500" />,
+      icon: <Database className="h-10 w-10 text-orange-500" />,
       title: "SaaS Product Development",
       description: "End-to-end development of scalable, cloud-based software-as-a-service solutions.",
     },
     {
-      icon: <Workflow className="h-10 w-10 text-purple-500" />,
+      icon: <Workflow className="h-10 w-10 text-orange-500" />,
       title: "Workflow Optimization",
       description: "Streamline your business processes with custom automation and optimization solutions.",
     },
     {
-      icon: <Server className="h-10 w-10 text-purple-500" />,
+      icon: <Server className="h-10 w-10 text-orange-500" />,
       title: "API Integration",
       description: "Seamless integration of third-party services and APIs to enhance your digital ecosystem.",
     },
     {
-      icon: <Cloud className="h-10 w-10 text-purple-500" />,
+      icon: <Cloud className="h-10 w-10 text-orange-500" />,
       title: "Cloud Migration",
       description: "Migrate your existing infrastructure to the cloud for improved scalability and performance.",
     },
@@ -73,9 +73,9 @@ export default function ServicesSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            Our <span className="text-purple-500">Services</span>
+            Our <span className="text-orange-500">Services</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-6" />
+          <div className="w-20 h-1 bg-gradient-to-r from-[#ff0000] to-orange-600 mx-auto mb-6" />
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             We offer a comprehensive range of digital services to help your business thrive in the digital landscape.
           </p>
@@ -90,7 +90,7 @@ export default function ServicesSection() {
         >
           {services.map((service, index) => (
             <motion.div key={index} variants={itemVariants}>
-              <Card className="bg-black/50 backdrop-blur-sm border-white/10 hover:border-purple-500/50 transition-all duration-300 h-full">
+              <Card className="bg-black/50 backdrop-blur-sm border-white/10 hover:border-orange-500/50 transition-all duration-300 h-full">
                 <CardHeader>
                   <div className="mb-4">{service.icon}</div>
                   <CardTitle className="text-white text-xl">{service.title}</CardTitle>
