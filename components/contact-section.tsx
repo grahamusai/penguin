@@ -11,7 +11,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 
 export default function ContactSection() {
   const [submit, submitting] = useFormspark({
-    formId: "opxueG6Xb",
+    formId: "qFb3IPe0j",
   });
   const [formState, setFormState] = useState({
     name: "",
@@ -19,11 +19,6 @@ export default function ContactSection() {
     subject: "",
     message: "",
   });
-  const [businessname, setName] = useState("");
-  const [owner, setOwner] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
-  const [amount, setAmount] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -34,21 +29,7 @@ export default function ContactSection() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission - would connect to a server action in a real app
-    console.log("Form submitted:", formState);
-    // Reset form
-    setFormState({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
-    // Show success message
-    alert("Thanks for your message! We'll get back to you soon.");
-  };
-
+  
   const contactInfo = [
     {
       icon: <Mail className="h-6 w-6 text-orange-500" />,
@@ -130,18 +111,15 @@ export default function ContactSection() {
           <form
             onSubmit={async (e) => {
               e.preventDefault();
-
               await submit({
-                businessname,
-                owner,
-                phone,
-                email,
-                amount,
+                senderName: formState.name,
+                subject: formState.subject,
+                email: formState.email,
+                message: formState.message,
               });
               alert(
                 "Your email has been submitted successfully \n \n A funding specialist will be in touch with you shortly"
               );
-              window.location.href = "https://getfunds.co.za/";
             }}
             className="space-y-6"
           >
@@ -155,7 +133,7 @@ export default function ContactSection() {
                   name="name"
                   value={formState.name}
                   required
-                  onChange={(e) => setName(e.target.value)}
+                  onChange={handleChange}
                   className="bg-black/50 border-white/10 focus:border-orange-500 text-white"
                   placeholder="John Doe"
                 />
@@ -169,7 +147,8 @@ export default function ContactSection() {
                   id="email"
                   name="email"
                   type="email"
-                   onChange={(e) => setName(e.target.value)}
+                  value={formState.email}
+                  onChange={handleChange}
                   required
                   className="bg-black/50 border-white/10 focus:border-orange-500 text-white"
                   placeholder="john@example.com"
@@ -185,7 +164,7 @@ export default function ContactSection() {
                 id="subject"
                 name="subject"
                 value={formState.subject}
-                 onChange={(e) => setName(e.target.value)}
+                onChange={handleChange}
                 required
                 className="bg-black/50 border-white/10 focus:border-orange-500 text-white"
                 placeholder="Project Inquiry"
@@ -200,7 +179,7 @@ export default function ContactSection() {
                 id="message"
                 name="message"
                 value={formState.message}
-                 onChange={(e) => setName(e.target.value)}
+                onChange={handleChange}
                 required
                 className="bg-black/50 border-white/10 focus:border-orange-500 text-white min-h-[150px]"
                 placeholder="Tell us about your project..."
